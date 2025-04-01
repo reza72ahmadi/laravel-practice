@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/', [HomeController::class, 'index']);
-Route::resource('/', HomeController::class);
+// Route::resource('/', HomeController::class);
 
 
 
@@ -16,3 +16,9 @@ Route::resource('/', HomeController::class);
 // Route::get('/category', function () {
 //     return redirect('home')->with('status', 'Reza');
 // });
+Route::get('/' , function () {
+    return response()->json([
+        'age' => 20,
+        'status' => 'enable',
+    ]);
+});
